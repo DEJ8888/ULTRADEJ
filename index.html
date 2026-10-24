@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050906">
+<meta name="description" content="ULTRADEJ — Ethereum-based digital token focused on transparency, accessibility and community-driven development.">
+<title>ULTRADEJ — Official Website</title>
+
+<style>
+:root {
+  --bg: #050906;
+  --panel: #0b1710;
+  --gold: #e3c56a;
+  --green: #70d894;
+  --text: #f5f6f0;
+  --muted: #b0bdb2;
+  --line: rgba(227,197,106,.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 50% -20%, #1b3a25 0%, #050906 56%);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(5,9,6,.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand img {
+  display: block;
+  width: 145px;
+  max-height: 68px;
+  object-fit: contain;
+}
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: .94rem;
+  color: #dbe2d9;
+}
+
+.navlinks a:hover {
+  color: var(--gold);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 19px;
+  border-radius: 999px;
+  border: 1px solid var(--gold);
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.gold {
+  background: linear-gradient(135deg, #f1d983, #c5a345);
+  color: #11160d;
+}
+
+.outline {
+  background: rgba(255,255,255,.035);
+  border-color: #ffffff35;
+  color: var(--text);
+}
+
+.menu {
+  display: none;
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 8px 12px;
+  font-size: 1.15rem;
+}
+
+.hero {
+  padding: 76px 0 62px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 46px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--green);
+  font-weight: 800;
+  font-size: .77rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 14px var(--green);
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw, 5.15rem);
+  line-height: 1.03;
+  letter-spacing: -.055em;
+  margin: 19px 0;
+}
+
+h1 span,
+h2 span {
+  color: var(--gold);
+}
+
+.lead {
+  font-size: 1.12rem;
+  color: #c5d0c5;
+  max-width: 610px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 26px 0;
+}
+
+.micro,
+.note {
+  font-size: .84rem;
+  color: var(--muted);
+}
+
+.logo-card {
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(24,49,31,.9), rgba(7,14,9,.96));
+  box-shadow: 0 24px 75px #0005;
+}
+
+.logo-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  object-fit: contain;
+}
+
+.logo-caption {
+  text-align: center;
+  color: var(--gold);
+  font-weight: 800;
+  font-size: .74rem;
+  letter-spacing: .16em;
+  margin-top: 12px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  margin-top: 31px;
+}
+
+.stat {
+  padding: 14px 12px;
+  border: 1px solid #ffffff17;
+  border-radius: 15px;
+  background: #ffffff05;
+}
+
+.stat strong {
+  display: block;
+  color: var(--gold);
+  font-size: .98rem;
+}
+
+.stat small {
+  color: var(--muted);
+}
+
+section {
+  padding: 55px 0;
+}
+
+.kicker {
+  color: var(--green);
+  font-size: .76rem;
+  letter-spacing: .15em;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  line-height: 1.14;
+  letter-spacing: -.035em;
+  margin: 9px 0 14px;
+}
+
+.intro {
+  max-width: 760px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+  margin-top: 27px;
+}
+
+.card {
+  padding: 24px;
+  border: 1px solid rgba(227,197,106,.19);
+  border-radius: 21px;
+  background: linear-gradient(145deg,#102017,#09100b);
+}
+
+.icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: #e3c56a15;
+  color: var(--gold);
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.box {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 21px;
+  background: var(--panel);
+}
+
+.address {
+  padding: 14px;
+  margin: 14px 0;
+  overflow-wrap: anywhere;
+  background: #030604;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: #e9d99d;
+  font-family: monospace;
+  font-size: .88rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.info {
+  padding: 15px;
+  border: 1px solid #ffffff16;
+  border-radius: 14px;
+  background: #ffffff04;
+}
+
+.info small {
+  display: block;
+  color: var(--muted);
+}
+
+.info strong {
+  display: block;
+  margin-top: 5px;
+}
+
+.community {
+  padding: 29px;
+  border: 1px solid var(--line);
+  border-radius: 25px;
+  background: linear-gradient(110deg,#16301f,#09110b);
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.socials a {
+  padding: 10px 16px;
+  border: 1px solid #ffffff30;
+  border-radius: 999px;
+  background: #ffffff05;
+  font-weight: 700;
+}
+
+.socials a:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+footer {
+  margin-top: 20px;
+  border-top: 1px solid #ffffff15;
+  padding: 28px 0 35px;
+  color: var(--muted);
+  font-size: .84rem;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  display: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #111;
+  font-weight: 800;
+  z-index: 30;
+}
+
+.toast.show {
+  display: block;
+}
+
+@media(max-width:800px) {
+  .hero-grid,
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 46px;
+  }
+
+  .logo-card {
+    max-width: 570px;
+    margin: auto;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .navlinks {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    padding: 20px 4%;
+    background: #07100a;
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navlinks.open {
+    display: flex;
+  }
+}
+
+@media(max-width:480px) {
+  .brand img {
+    width: 118px;
+    max-height: 58px;
+  }
+
+  .nav {
+    min-height: 68px;
+  }
+
+  .navlinks {
+    top: 68px;
+  }
+
+  .stats {
+    gap: 6px;
+  }
+
+  .stat {
+    padding: 11px 7px;
+  }
+
+  .stat strong {
+    font-size: .8rem;
+  }
+
+  .stat small {
+    font-size: .7rem;
+  }
+
+  .actions .btn {
+    width: 100%;
+  }
+
+  .box,
+  .card {
+    padding: 19px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="ULTRADEJ home">
+      <img src="ultradej-logo.jpeg" alt="ULTRADEJ logo">
+    </a>
+
+    <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <nav class="navlinks" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#details">Token Details</a>
+      <a href="#community">Community</a>
+      <a class="btn gold" href="#details">View Contract ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Ethereum-based digital token</div>
+
+      <h1>Meet <span>ULTRADEJ</span><br>Built on transparency.</h1>
+
+      <p class="lead">
+        A community-focused digital asset built around clear on-chain
+        information, accessibility, and continuous development.
+      </p>
+
+      <div class="actions">
+        <a class="btn gold" href="#details">Explore Token Details ↓</a>
+        <a class="btn outline" href="#community">Join the Community ↗</a>
+      </div>
+
+      <p class="micro">Blockchain: Ethereum · Token ticker: DEJ</p>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>1,000,000,000</strong>
+          <small>Total supply</small>
+        </div>
+        <div class="stat">
+          <strong>Ethereum</strong>
+          <small>Network</small>
+        </div>
+        <div class="stat">
+          <strong>18</strong>
+          <small>Decimals</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="logo-card">
+      <img src="ultradej-logo.jpeg" alt="ULTRADEJ gold and green logo">
+      <div class="logo-caption">TECHNOLOGY · TRANSPARENCY · COMMUNITY</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+  <div class="wrap">
+
+    <div class="kicker">About the Project</div>
+    <h2>A digital asset with a clear foundation.</h2>
+
+    <p class="intro">
+      DEJ is an Ethereum-based digital token created with a focus on
+      transparency, accessibility, and community-driven development.
+      With a total supply of 1,000,000,000 DEJ, the project provides a
+      clearly defined token structure and publicly verifiable blockchain
+      information. DEJ is designed to build a recognizable digital asset
+      ecosystem through technology, community participation, and continuous
+      development.
+    </p>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="icon">◇</div>
+        <h3>Transparency</h3>
+        <p>
+          DEJ operates on the Ethereum blockchain, allowing relevant token
+          information and transactions to be independently verified on-chain.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">◎</div>
+        <h3>Community</h3>
+        <p>
+          We aim to build a recognizable digital asset ecosystem through
+          community participation and continuous development.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon">↗</div>
+        <h3>Our Vision</h3>
+        <p>
+          Building a recognizable digital asset through technology,
+          transparency, and community.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- TOKEN DETAILS -->
+<section id="details">
+  <div class="wrap">
+
+    <div class="kicker">Public Blockchain Information</div>
+    <h2>Token <span>Details</span></h2>
+
+    <p class="intro">
+      Review the token information below. Verify the contract independently
+      before interacting with any digital asset.
+    </p>
+
+    <div class="details-grid">
+
+      <div class="box">
+        <h3>Ethereum Contract Address</h3>
+
+        <div class="address" id="address">
+          0xc39412b5833908ff919f06d734abc6e6f100f33e
+        </div>
+
+        <button class="btn gold" id="copy" type="button">
+          Copy Contract Address
+        </button>
+
+        <p class="note">
+          Always verify the contract address from a trusted source before
+          sending funds or making a transaction.
+        </p>
+      </div>
+
+      <div class="box">
+        <div class="info-grid">
+
+          <div class="info">
+            <small>Network</small>
+            <strong>Ethereum</strong>
+          </div>
+
+          <div class="info">
+            <small>Token Symbol</small>
+            <strong>DEJ</strong>
+          </div>
+
+          <div class="info">
+            <small>Total Supply</small>
+            <strong>1 Billion DEJ</strong>
+          </div>
+
+          <div class="info">
+            <small>Decimals</small>
+            <strong>18</strong>
+          </div>
+
+          <div class="info">
+            <small>Project Name</small>
+            <strong>ULTRADEJ</strong>
+          </div>
+
+          <div class="info">
+            <small>Trading Status</small>
+            <strong>Check availability</strong>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <p class="note">
+      A verified live trading-pool link has not been supplied, so this website
+      does not claim that a Buy or Swap function is available.
+    </p>
+
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community">
+  <div class="wrap community">
+
+    <div class="kicker">Stay Connected</div>
+    <h2>Follow the <span>Community</span></h2>
+
+    <p class="intro">
+      Visit the project's social channels for updates and community information.
+    </p>
+
+    <div class="socials">
+
+      <a href="https://t.me/dejcrypto"
+         target="_blank" rel="noopener noreferrer">
+        Telegram ↗
+      </a>
+
+      <a href="https://x.com/dejgroup?s=11"
+         target="_blank" rel="noopener noreferrer">
+        X / Twitter ↗
+      </a>
+
+      <a href="https://www.facebook.com/share/1JFZWNo17B/?mibextid=wwXIfr"
+         target="_blank" rel="noopener noreferrer">
+        Facebook ↗
+      </a>
+
+      <a href="https://www.tiktok.com/@dejgroup.proton.m?_r=1&_t=ZS-9ApKoLkbmWS"
+         target="_blank" rel="noopener noreferrer">
+        TikTok ↗
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>ULTRADEJ</strong><br>
+    Digital assets involve risk. This website is for informational purposes
+    only and is not financial advice.
+    <br><br>
+    © <span id="year"></span> ULTRADEJ. All rights reserved.
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  Contract address copied
+</div>
+
+<script>
+const menu = document.getElementById('menu');
+const navlinks = document.getElementById('navlinks');
+
+menu.addEventListener('click', () => {
+  const opened = navlinks.classList.toggle('open');
+  menu.textContent = opened ? '✕' : '☰';
+  menu.setAttribute('aria-expanded', String(opened));
+});
+
+navlinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navlinks.classList.remove('open');
+    menu.textContent = '☰';
+    menu.setAttribute('aria-expanded', 'false');
+  });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+document.getElementById('copy').addEventListener('click', async () => {
+  const address = document.getElementById('address').textContent.trim();
+
+  try {
+    await navigator.clipboard.writeText(address);
+  } catch (error) {
+    const range = document.createRange();
+    range.selectNodeContents(document.getElementById('address'));
+
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
+
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2200);
+});
+</script>
+
+</body>
+</html>
