@@ -18,9 +18,7 @@
   --line: rgba(227,197,106,.25);
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html {
   scroll-behavior: smooth;
@@ -77,9 +75,7 @@ header {
   color: #dbe2d9;
 }
 
-.navlinks a:hover {
-  color: var(--gold);
-}
+.navlinks a:hover { color: var(--gold); }
 
 .btn {
   display: inline-flex;
@@ -113,9 +109,7 @@ header {
   font-size: 1.15rem;
 }
 
-.hero {
-  padding: 76px 0 62px;
-}
+.hero { padding: 76px 0 62px; }
 
 .hero-grid {
   display: grid;
@@ -150,10 +144,7 @@ h1 {
   margin: 19px 0;
 }
 
-h1 span,
-h2 span {
-  color: var(--gold);
-}
+h1 span, h2 span { color: var(--gold); }
 
 .lead {
   font-size: 1.12rem;
@@ -168,8 +159,7 @@ h2 span {
   margin: 26px 0;
 }
 
-.micro,
-.note {
+.micro, .note {
   font-size: .84rem;
   color: var(--muted);
 }
@@ -221,13 +211,9 @@ h2 span {
   font-size: .98rem;
 }
 
-.stat small {
-  color: var(--muted);
-}
+.stat small { color: var(--muted); }
 
-section {
-  padding: 55px 0;
-}
+section { padding: 55px 0; }
 
 .kicker {
   color: var(--green);
@@ -276,9 +262,7 @@ h2 {
   margin-bottom: 14px;
 }
 
-.card h3 {
-  margin: 0 0 8px;
-}
+.card h3 { margin: 0 0 8px; }
 
 .card p {
   margin: 0;
@@ -384,32 +368,14 @@ footer {
   z-index: 30;
 }
 
-.toast.show {
-  display: block;
-}
+.toast.show { display: block; }
 
 @media(max-width:800px) {
-  .hero-grid,
-  .details-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    padding-top: 46px;
-  }
-
-  .logo-card {
-    max-width: 570px;
-    margin: auto;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .menu {
-    display: block;
-  }
+  .hero-grid, .details-grid { grid-template-columns: 1fr; }
+  .hero { padding-top: 46px; }
+  .logo-card { max-width: 570px; margin: auto; }
+  .cards { grid-template-columns: 1fr; }
+  .menu { display: block; }
 
   .navlinks {
     display: none;
@@ -424,49 +390,19 @@ footer {
     align-items: stretch;
   }
 
-  .navlinks.open {
-    display: flex;
-  }
+  .navlinks.open { display: flex; }
 }
 
 @media(max-width:480px) {
-  .brand img {
-    width: 118px;
-    max-height: 58px;
-  }
-
-  .nav {
-    min-height: 68px;
-  }
-
-  .navlinks {
-    top: 68px;
-  }
-
-  .stats {
-    gap: 6px;
-  }
-
-  .stat {
-    padding: 11px 7px;
-  }
-
-  .stat strong {
-    font-size: .8rem;
-  }
-
-  .stat small {
-    font-size: .7rem;
-  }
-
-  .actions .btn {
-    width: 100%;
-  }
-
-  .box,
-  .card {
-    padding: 19px;
-  }
+  .brand img { width: 118px; max-height: 58px; }
+  .nav { min-height: 68px; }
+  .navlinks { top: 68px; }
+  .stats { gap: 6px; }
+  .stat { padding: 11px 7px; }
+  .stat strong { font-size: .8rem; }
+  .stat small { font-size: .7rem; }
+  .actions .btn { width: 100%; }
+  .box, .card { padding: 19px; }
 }
 </style>
 </head>
@@ -485,7 +421,12 @@ footer {
       <a href="#about">About</a>
       <a href="#details">Token Details</a>
       <a href="#community">Community</a>
-      <a class="btn gold" href="#details">View Contract ↗</a>
+
+      <a class="btn gold"
+         href="https://app.uniswap.org/swap?chain=ethereum&outputCurrency=0xC39412b5833908Ff919F06D734abc6e6F100F33e"
+         target="_blank" rel="noopener noreferrer">
+        BUY ULTRADEJ ↗
+      </a>
     </nav>
   </div>
 </header>
@@ -506,7 +447,13 @@ footer {
       </p>
 
       <div class="actions">
-        <a class="btn gold" href="#details">Explore Token Details ↓</a>
+        <a class="btn gold"
+           href="https://app.uniswap.org/swap?chain=ethereum&outputCurrency=0xC39412b5833908Ff919F06D734abc6e6F100F33e"
+           target="_blank" rel="noopener noreferrer">
+          BUY ULTRADEJ ↗
+        </a>
+
+        <a class="btn outline" href="#details">Explore Token Details ↓</a>
         <a class="btn outline" href="#community">Join the Community ↗</a>
       </div>
 
@@ -536,7 +483,6 @@ footer {
   </div>
 </section>
 
-<!-- ABOUT SECTION -->
 <section id="about">
   <div class="wrap">
 
@@ -586,7 +532,6 @@ footer {
   </div>
 </section>
 
-<!-- TOKEN DETAILS -->
 <section id="details">
   <div class="wrap">
 
@@ -647,7 +592,7 @@ footer {
 
           <div class="info">
             <small>Trading Status</small>
-            <strong>Check availability</strong>
+            <strong>Pool created</strong>
           </div>
 
         </div>
@@ -656,14 +601,13 @@ footer {
     </div>
 
     <p class="note">
-      A verified live trading-pool link has not been supplied, so this website
-      does not claim that a Buy or Swap function is available.
+      Swap availability depends on the pool's liquidity and the trading route
+      supported by Uniswap.
     </p>
 
   </div>
 </section>
 
-<!-- COMMUNITY -->
 <section id="community">
   <div class="wrap community">
 
@@ -691,9 +635,11 @@ footer {
         Facebook ↗
       </a>
 
-      <a href="https://www.tiktok.com/@ultradej01" target="_blank" rel="noopener noreferrer">
-    TikTok ↗
-</a>
+      <a href="https://www.tiktok.com/@ultradej01"
+         target="_blank" rel="noopener noreferrer">
+        TikTok ↗
+      </a>
+
     </div>
   </div>
 </section>
